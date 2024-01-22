@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Unidad 6 - Práctica 1</title>
+</head>
+
+<body>
+    <h1>LIBRERÍAS VALENCIA</h1>
+    <form id="bookForm" class="container">
+        <label for="title">TÍTULO:</label>
+        <input type="text" id="title" required>
+
+        <label for="author">AUTOR:</label>
+        <input type="text" id="author" required>
+
+        <label for="price">PRECIO:</label>
+        <input type="text" id="price" required>
+
+        <label for="editorial">EDITORIAL:</label>
+        <select id="editorial" required>
+            <option value="editorial1">Editorial 1</option>
+            <option value="editorial2">Editorial 2</option>
+        </select>
+        <input type="text" id="newEditorial" placeholder="Añadir nueva editorial">
+        <button type="button" onclick="addNewEditorial()">AÑADIR EDITORIAL</button>
+
+        <label for="locations">UBICACIÓN:</label>
+        <ul id="locationsList">
+            <li>CALLEXXXXXX</li>
+        </ul>
+        <button type="button" id="addLocationBtn">+</button>
+        <button type="button" id="removeLocationBtn">-</button>
+
+        <button type="submit">AGREGAR LIBRO</button>
+
+    </form>
+    <div id="successMessage"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
