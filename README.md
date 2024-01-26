@@ -10,4 +10,6 @@
 En principio muestra la dirección de una librería, pero dispone de unos botones que permiten mostrar + o - direcciones tomadas desde un array.
 
 **Estructura:**
+
+
 ![Imagen estructura](https://github.com/crisilto/javascriptDAW/blob/main/Captura.PNG)
