@@ -12,4 +12,4 @@ En principio muestra la dirección de una librería, pero dispone de unos botone
 **Estructura:**
 
 
-![Imagen estructura](https://github.com/crisilto/javascriptDAW/blob/main/Captura.PNG)
+![Imagen estructura](https://github.com/crisilto/javascriptDAW/blob/main/unidad6/Captura.PNG)
