@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const title = document.getElementById("title").value;
         const author = document.getElementById("author").value;
         const price = document.getElementById("price").value;
-        const selectedEditorial = editorialSelect.value;
+        const selectedEditorial = editorialSelect.options[editorialSelect.selectedIndex].text;
 
         //Añadimos los datos del nuevo libro al mensaje de éxito una vez se haya añadido exitosamente
         successMessage.textContent = `Libro añadido con éxito. Título: ${title} - Autor: ${author} - Precio: ${price} - Editorial: ${selectedEditorial}`;
@@ -23,27 +23,15 @@ document.addEventListener("DOMContentLoaded", function () {
         //Mostramos el mensaje (pasa de display none a block)
         successMessage.style.display = "block";
 
-        //Limpiamos el cuadro de texto de nueva editorial
-        newEditorialInput.value = "";
+        setTimeout(function(){
+            successMessage.style.display = "none";
+        }, 5000); //Ocultamos el mensaje después de pasados 5 segundos
 
-        //Añadimos una nueva editorial al desplegable 
-        //siempre y cuando no esté vacía y no exista ya
-        if (
-            newEditorialInput.value.trim() !== "" &&
-            !editorialSelect.querySelector(`option[value="${newEditorialInput.value}"]`)
-        ) {
-            const newOption = document.createElement("option");
-            newOption.value = newEditorialInput.value;
-            newOption.textContent = newEditorialInput.value;
-            editorialSelect.add(newOption);
+        //Limpiamos los elementos del formulario después de agregar el libro
+        form.reset();
 
-            //Seleccionamos la nueva opción añadida
-            editorialSelect.value = newEditorialInput.value;
-        }
-
-        //Creamos un nuevo elemento de lista con la ubicación
-        const locationItem = document.createElement("li");
-        locationsList.appendChild(locationItem);
+        //Actualizamos la lista de ubicaciones en caso de que haya habido algún cambio
+        updateLocationsList();
     });
 
     document.getElementById("addLocationBtn").addEventListener("click", function () {
