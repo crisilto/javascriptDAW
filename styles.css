@@ -9,24 +9,29 @@ body {
 h1{
     text-align: center;
     font-size: 34px;
+    margin: 50px 0px;
 }
 
 .container {
     max-width: 700px;
-    margin: 0 auto;
-    position: relative;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e6e6e6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
 }
 
 #successMessage {
-    position: absolute;
-    bottom: 10px;
+    position: relative;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #4CAF50;
     color: white;
     padding: 15px;
     border-radius: 5px;
-    display: none;
+    margin-top: 40px;
+    width: 54%;
 }
 
 form {
@@ -35,14 +40,17 @@ form {
 
 label {
     display: block;
-    margin: 4px 40px;
+    margin: 10px 0px;
 }
 
-input, select, button {
-    width: 100%;
+input[type="text"],
+select {
+    width: calc(100% - 80px); 
     padding: 10px;
-    margin: 5px 40px;
-    box-sizing: border-box;
+    margin: 10px 40px;
+    border: 1px solid #ddd; 
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); 
 }
 
 button {
@@ -50,11 +58,25 @@ button {
     color: white;
     border: none;
     padding: 15px;
+    margin: 10px 40px;
     border-radius: 5px;
     cursor: pointer;
-    width: 35%;
 }
 
 button:hover {
     background-color: #333;
+}
+
+#addLocationBtn,
+#removeLocationBtn {
+    width: auto;
+    padding: 10px;
+    margin: 10px 40px;
+    display: inline-block;
+}
+
+#bookForm button[type="submit"]{
+    width: calc(100% - 80px);
+    display: block;
+    margin: 20px auto;
 }
