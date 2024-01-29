@@ -1,11 +1,11 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: monospace;
     background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    margin: 0px;
 }
 
 form {
@@ -21,7 +21,7 @@ input[type="text"] {
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 4px;
-    box-sizing: border-box; /* Asegura que padding y border no aumenten el ancho */
+    box-sizing: border-box; 
 }
 
 #resultado {
